@@ -1,4 +1,4 @@
-// Messaggio di benvenuto
+// Aggiungi funzionalità al menu (opzionale)
 document.addEventListener('DOMContentLoaded', () => {
-    console.log('Benvenuti su Petrol Service 20!');
+    console.log('Sito pronto per Petrol Service 20!');
 });
