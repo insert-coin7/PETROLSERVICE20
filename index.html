@@ -5,267 +5,80 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Petrol Service 20</title>
     <style>
-        /* Stile generale */
         body {
             font-family: Arial, sans-serif;
             margin: 0;
             padding: 0;
             color: #333;
             background-color: #f9f9f9;
-            line-height: 1.6;
-            overflow-x: hidden;
         }
 
-        /* Header con immagine di sfondo */
         header {
-            position: relative;
-            height: 100vh;
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            align-items: center;
             text-align: center;
+            padding: 20px;
+            background-color: #000;
             color: white;
-            overflow: hidden;
         }
 
-        #image-container {
-            position: absolute;
-            top: 0;
-            left: 0;
+        header video {
             width: 100%;
-            height: 100%;
-            z-index: -1;
-        }
-
-        #image-container img {
-            width: 100%;
-            height: 100%;
+            max-height: 500px;
             object-fit: cover;
         }
 
-        #prev-btn, #next-btn {
-            position: absolute;
-            top: 50%;
-            transform: translateY(-50%);
-            background-color: rgba(0, 0, 0, 0.5);
-            color: white;
-            border: none;
-            padding: 10px 20px;
-            cursor: pointer;
-            font-size: 1rem;
-            z-index: 1;
-        }
-
-        #prev-btn {
-            left: 20px;
-        }
-
-        #next-btn {
-            right: 20px;
-        }
-
-        #prev-btn:hover, #next-btn:hover {
-            background-color: rgba(0, 0, 0, 0.8);
-        }
-
-        header h1 {
-            font-size: 3rem;
-            margin-bottom: 10px;
-            animation: fadeIn 2s ease-in-out;
-            color: black;
-        }
-
-        header p {
-            font-size: 1.5rem;
-            animation: fadeIn 2.5s ease-in-out;
-            color: black;
-        }
-
-        .cta-button {
-            margin-top: 20px;
-            padding: 10px 20px;
-            background: #e60012;
-            color: white;
-            text-decoration: none;
-            border-radius: 5px;
-            font-weight: bold;
-            animation: fadeIn 3s ease-in-out;
-        }
-
-        .cta-button:hover {
-            background: #c3000f;
-        }
-
-        /* Animazioni */
-        @keyframes fadeIn {
-            from {
-                opacity: 0;
-                transform: translateY(20px);
-            }
-            to {
-                opacity: 1;
-                transform: translateY(0);
-            }
-        }
-
-        /* Navbar */
-        nav {
-            position: fixed;
-            top: 0;
-            width: 100%;
-            background: rgba(0, 0, 0, 0.8);
-            padding: 10px 0;
-            z-index: 1000;
-            transition: background 0.3s;
-        }
-
-        nav.scrolled {
-            background: rgba(0, 0, 0, 1);
-        }
-
-        nav a {
-            color: white;
-            text-decoration: none;
-            margin: 0 15px;
-            font-weight: bold;
-        }
-
-        nav a:hover {
-            color: #e60012;
-        }
-
-        /* Sezioni */
         section {
-            padding: 60px 20px;
+            padding: 20px;
             max-width: 1200px;
             margin: auto;
             text-align: center;
-            background: white;
-            margin-bottom: 20px;
-            border-radius: 8px;
-            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-            opacity: 0;
-            transform: translateY(20px);
-            animation: fadeIn 1s ease-in-out forwards;
         }
 
-        section:nth-child(odd) {
-            animation-delay: 0.2s;
+        .images-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 20px;
+            margin-top: 20px;
         }
 
-        section:nth-child(even) {
-            animation-delay: 0.4s;
-        }
-
-        #image-container-gallery {
-            max-width: 800px;
-            margin: 20px auto;
-        }
-
-        #image-container-gallery img {
+        .images-grid img {
             width: 100%;
             height: auto;
             border-radius: 8px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
         }
 
-        #prev-btn-gallery, #next-btn-gallery {
-            padding: 10px 20px;
-            margin: 10px;
-            background-color: #e60012;
-            color: white;
-            border: none;
-            border-radius: 5px;
-            cursor: pointer;
-            font-size: 1rem;
-        }
-
-        #prev-btn-gallery:hover, #next-btn-gallery:hover {
-            background-color: #c3000f;
-        }
-
-        /* Footer */
         footer {
             text-align: center;
             padding: 20px;
-            background: #333;
+            background-color: #333;
             color: white;
         }
-
-        /* Responsività */
-        @media (max-width: 768px) {
-            header h1 {
-                font-size: 2.5rem;
-            }
-
-            header p {
-                font-size: 1.2rem;
-            }
-
-            #prev-btn, #next-btn {
-                font-size: 0.9rem;
-            }
-        }
     </style>
-    <script>
-        // Navbar dinamica
-        window.addEventListener('scroll', () => {
-            const nav = document.querySelector('nav');
-            if (window.scrollY > 50) {
-                nav.classList.add('scrolled');
-            } else {
-                nav.classList.remove('scrolled');
-            }
-        });
-
-        // Galleria Header
-        const imagesHeader = [
-            "https://github.com/insert-coin7/PETROLSERVICE20/raw/main/IMAGE/impianto1.jpg",
-            "https://github.com/insert-coin7/PETROLSERVICE20/raw/main/IMAGE/impianto2.jpg",
-            "https://github.com/insert-coin7/PETROLSERVICE20/raw/main/IMAGE/impianto3.jpg"
-        ];
-
-        let currentIndexHeader = 0;
-
-        function showImageHeader(index) {
-            const currentImage = document.getElementById('current-image');
-            currentImage.src = imagesHeader[index];
-        }
-
-        document.getElementById('prev-btn').addEventListener('click', () => {
-            currentIndexHeader = (currentIndexHeader > 0) ? currentIndexHeader - 1 : imagesHeader.length - 1;
-            showImageHeader(currentIndexHeader);
-        });
-
-        document.getElementById('next-btn').addEventListener('click', () => {
-            currentIndexHeader = (currentIndexHeader < imagesHeader.length - 1) ? currentIndexHeader + 1 : 0;
-            showImageHeader(currentIndexHeader);
-        });
-    </script>
 </head>
 <body>
-    <!-- Header con galleria di immagini -->
+    <!-- Header con video -->
     <header>
-        <div id="image-container">
-            <img id="current-image" src="https://github.com/insert-coin7/PETROLSERVICE20/raw/main/IMAGE/impianto1.jpg" alt="Foto impianto 1">
-            <button id="prev-btn">Precedente</button>
-            <button id="next-btn">Successivo</button>
-        </div>
         <h1>Petrol Service 20</h1>
         <p>Soluzioni innovative per gli impianti petroliferi</p>
+        <video autoplay muted loop>
+            <source src="https://www.w3schools.com/html/mov_bbb.mp4" type="video/mp4">
+            Il tuo browser non supporta i video.
+        </video>
     </header>
 
-    <!-- Navbar -->
-    <nav>
-        <a href="#about">Chi Siamo</a>
-        <a href="#services">Servizi</a>
-        <a href="#gallery">Galleria</a>
-        <a href="#contact">Contatti</a>
-    </nav>
+    <!-- Sezione immagini -->
+    <section>
+        <h2>I nostri Impianti</h2>
+        <div class="images-grid">
+            <img src="https://github.com/insert-coin7/PETROLSERVICE20/raw/main/IMAGE/impianto1.jpg" alt="Impianto 1">
+            <img src="https://github.com/insert-coin7/PETROLSERVICE20/raw/main/IMAGE/impianto2.jpg" alt="Impianto 2">
+            <img src="https://github.com/insert-coin7/PETROLSERVICE20/raw/main/IMAGE/impianto3.jpg" alt="Impianto 3">
+        </div>
+    </section>
 
-    <!-- Sezioni -->
-    <section id="about">
-        <h2>Chi Siamo</h2>
-        <p>Petrol Service 20 è un'azienda leader nella manutenzione e gestione degli impianti petroliferi. Garantiamo qualità
-
-        
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2025 Petrol Service 20. Tutti i diritti riservati.</p>
+    </footer>
+</body>
+</html>
