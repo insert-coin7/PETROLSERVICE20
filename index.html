@@ -13,6 +13,7 @@
             color: #333;
             background-color: #f9f9f9;
             line-height: 1.6;
+            overflow-x: hidden;
         }
 
         /* Header con immagine di sfondo */
@@ -31,10 +32,39 @@
         header h1 {
             font-size: 3rem;
             margin-bottom: 10px;
+            animation: fadeIn 2s ease-in-out;
         }
 
         header p {
             font-size: 1.5rem;
+            animation: fadeIn 2.5s ease-in-out;
+        }
+
+        .cta-button {
+            margin-top: 20px;
+            padding: 10px 20px;
+            background: #e60012;
+            color: white;
+            text-decoration: none;
+            border-radius: 5px;
+            font-weight: bold;
+            animation: fadeIn 3s ease-in-out;
+        }
+
+        .cta-button:hover {
+            background: #c3000f;
+        }
+
+        /* Animazioni */
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
         }
 
         /* Navbar */
@@ -45,6 +75,11 @@
             background: rgba(0, 0, 0, 0.8);
             padding: 10px 0;
             z-index: 1000;
+            transition: background 0.3s;
+        }
+
+        nav.scrolled {
+            background: rgba(0, 0, 0, 1);
         }
 
         nav a {
@@ -68,24 +103,40 @@
             margin-bottom: 20px;
             border-radius: 8px;
             box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+            opacity: 0;
+            transform: translateY(20px);
+            animation: fadeIn 1s ease-in-out forwards;
         }
 
-        /* Galleria */
-        .gallery {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 20px;
+        section:nth-child(odd) {
+            animation-delay: 0.2s;
         }
 
-        .gallery img {
-            width: 100%;
+        section:nth-child(even) {
+            animation-delay: 0.4s;
+        }
+
+        /* Galleria Slider */
+        .gallery-slider {
+            display: flex;
+            overflow-x: scroll;
+            scroll-snap-type: x mandatory;
+            gap: 10px;
+            padding: 10px;
+        }
+
+        .gallery-slider img {
+            flex: 0 0 auto;
+            scroll-snap-align: center;
+            width: 80%;
             height: auto;
             border-radius: 8px;
-            transition: transform 0.3s;
+            transition: transform 0.5s ease;
         }
 
-        .gallery img:hover {
+        .gallery-slider img:hover {
             transform: scale(1.05);
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
         }
 
         /* Footer */
@@ -107,12 +158,24 @@
             }
         }
     </style>
+    <script>
+        // Navbar dinamica
+        window.addEventListener('scroll', () => {
+            const nav = document.querySelector('nav');
+            if (window.scrollY > 50) {
+                nav.classList.add('scrolled');
+            } else {
+                nav.classList.remove('scrolled');
+            }
+        });
+    </script>
 </head>
 <body>
     <!-- Header con immagine di sfondo -->
     <header>
         <h1>Petrol Service 20</h1>
         <p>Soluzioni innovative per gli impianti petroliferi</p>
+        <a href="#about" class="cta-button">Scopri di più</a>
     </header>
 
     <!-- Navbar -->
@@ -140,10 +203,10 @@
 
     <section id="gallery">
         <h2>Galleria</h2>
-        <div class="gallery">
-            <img src="https://via.placeholder.com/400" alt="Foto impianto 1">
-            <img src="https://via.placeholder.com/400" alt="Foto impianto 2">
-            <img src="https://via.placeholder.com/400" alt="Foto impianto 3">
+        <div class="gallery-slider">
+            <img src="https://via.placeholder.com/800x400" alt="Foto impianto 1">
+            <img src="https://via.placeholder.com/800x400" alt="Foto impianto 2">
+            <img src="https://via.placeholder.com/800x400" alt="Foto impianto 3">
         </div>
     </section>
 
