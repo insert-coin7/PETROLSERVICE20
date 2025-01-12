@@ -19,7 +19,6 @@
         /* Header con immagine di sfondo */
         header {
             position: relative;
-            background: url('https://via.placeholder.com/1920x600') no-repeat center center/cover;
             height: 100vh;
             display: flex;
             flex-direction: column;
@@ -27,6 +26,47 @@
             align-items: center;
             text-align: center;
             color: white;
+            overflow: hidden;
+        }
+
+        #image-container {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: -1;
+        }
+
+        #image-container img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        #prev-btn, #next-btn {
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            background-color: rgba(0, 0, 0, 0.5);
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            cursor: pointer;
+            font-size: 1rem;
+            z-index: 1;
+        }
+
+        #prev-btn {
+            left: 20px;
+        }
+
+        #next-btn {
+            right: 20px;
+        }
+
+        #prev-btn:hover, #next-btn:hover {
+            background-color: rgba(0, 0, 0, 0.8);
         }
 
         header h1 {
@@ -116,18 +156,18 @@
             animation-delay: 0.4s;
         }
 
-        #image-container {
+        #image-container-gallery {
             max-width: 800px;
             margin: 20px auto;
         }
 
-        #image-container img {
+        #image-container-gallery img {
             width: 100%;
             height: auto;
             border-radius: 8px;
         }
 
-        #prev-btn, #next-btn {
+        #prev-btn-gallery, #next-btn-gallery {
             padding: 10px 20px;
             margin: 10px;
             background-color: #e60012;
@@ -138,7 +178,7 @@
             font-size: 1rem;
         }
 
-        #prev-btn:hover, #next-btn:hover {
+        #prev-btn-gallery:hover, #next-btn-gallery:hover {
             background-color: #c3000f;
         }
 
@@ -176,40 +216,41 @@
             }
         });
 
-        // Galleria semplificata
-        const images = [
+        // Galleria Header
+        const imagesHeader = [
             "https://github.com/insert-coin7/PETROLSERVICE20/raw/main/IMAGE/impianto1.jpg",
             "https://github.com/insert-coin7/PETROLSERVICE20/raw/main/IMAGE/impianto2.jpg",
             "https://github.com/insert-coin7/PETROLSERVICE20/raw/main/IMAGE/impianto3.jpg"
         ];
 
-        let currentIndex = 0;
+        let currentIndexHeader = 0;
 
-        const currentImage = document.getElementById('current-image');
-        const prevBtn = document.getElementById('prev-btn');
-        const nextBtn = document.getElementById('next-btn');
-
-        function showImage(index) {
-            currentImage.src = images[index];
+        function showImageHeader(index) {
+            const currentImage = document.getElementById('current-image');
+            currentImage.src = imagesHeader[index];
         }
 
-        prevBtn.addEventListener('click', () => {
-            currentIndex = (currentIndex > 0) ? currentIndex - 1 : images.length - 1;
-            showImage(currentIndex);
+        document.getElementById('prev-btn').addEventListener('click', () => {
+            currentIndexHeader = (currentIndexHeader > 0) ? currentIndexHeader - 1 : imagesHeader.length - 1;
+            showImageHeader(currentIndexHeader);
         });
 
-        nextBtn.addEventListener('click', () => {
-            currentIndex = (currentIndex < images.length - 1) ? currentIndex + 1 : 0;
-            showImage(currentIndex);
+        document.getElementById('next-btn').addEventListener('click', () => {
+            currentIndexHeader = (currentIndexHeader < imagesHeader.length - 1) ? currentIndexHeader + 1 : 0;
+            showImageHeader(currentIndexHeader);
         });
     </script>
 </head>
 <body>
-    <!-- Header con immagine di sfondo -->
+    <!-- Header con galleria di immagini -->
     <header>
+        <div id="image-container">
+            <img id="current-image" src="https://github.com/insert-coin7/PETROLSERVICE20/raw/main/IMAGE/impianto1.jpg" alt="Foto impianto 1">
+            <button id="prev-btn">Precedente</button>
+            <button id="next-btn">Successivo</button>
+        </div>
         <h1>Petrol Service 20</h1>
         <p>Soluzioni innovative per gli impianti petroliferi</p>
-        <a href="#about" class="cta-button">Scopri di più</a>
     </header>
 
     <!-- Navbar -->
@@ -223,36 +264,4 @@
     <!-- Sezioni -->
     <section id="about">
         <h2>Chi Siamo</h2>
-        <p>Petrol Service 20 è un'azienda leader nella manutenzione e gestione degli impianti petroliferi. Garantiamo qualità, sicurezza e affidabilità.</p>
-    </section>
-
-    <section id="services">
-        <h2>Servizi</h2>
-        <ul>
-            <li>Manutenzione degli impianti</li>
-            <li>Ispezioni e certificazioni</li>
-            <li>Fornitura di attrezzature specializzate</li>
-        </ul>
-    </section>
-
-    <section id="gallery">
-        <h2>Galleria</h2>
-        <div id="image-container">
-            <img id="current-image" src="https://github.com/insert-coin7/PETROLSERVICE20/raw/main/IMAGE/impianto1.jpg" alt="Foto impianto 1">
-        </div>
-        <button id="prev-btn">Precedente</button>
-        <button id="next-btn">Successivo</button>
-    </section>
-
-    <section id="contact">
-        <h2>Contatti</h2>
-        <p>Per informazioni contattaci a: <strong>info@petrolservice20.com</strong></p>
-        <p>Telefono: <strong>+39 123 456 789</strong></p>
-    </section>
-
-    <!-- Footer -->
-    <footer>
-        <p>&copy; 2025 Petrol Service 20. Tutti i diritti riservati.</p>
-    </footer>
-</body>
-</html>
+        <p>Petrol Service 20 è un'azienda leader nella manutenzione e gestione degli impianti petroliferi. Garantiamo qualità
