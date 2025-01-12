@@ -4,29 +4,131 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Petrol Service 20</title>
-    <link rel="stylesheet" href="style.css">
+    <style>
+        /* Stile generale */
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            color: #333;
+            background-color: #f9f9f9;
+            line-height: 1.6;
+        }
+
+        /* Header con immagine di sfondo */
+        header {
+            position: relative;
+            background: url('https://via.placeholder.com/1920x600') no-repeat center center/cover;
+            height: 100vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            color: white;
+        }
+
+        header h1 {
+            font-size: 3rem;
+            margin-bottom: 10px;
+        }
+
+        header p {
+            font-size: 1.5rem;
+        }
+
+        /* Navbar */
+        nav {
+            position: fixed;
+            top: 0;
+            width: 100%;
+            background: rgba(0, 0, 0, 0.8);
+            padding: 10px 0;
+            z-index: 1000;
+        }
+
+        nav a {
+            color: white;
+            text-decoration: none;
+            margin: 0 15px;
+            font-weight: bold;
+        }
+
+        nav a:hover {
+            color: #e60012;
+        }
+
+        /* Sezioni */
+        section {
+            padding: 60px 20px;
+            max-width: 1200px;
+            margin: auto;
+            text-align: center;
+            background: white;
+            margin-bottom: 20px;
+            border-radius: 8px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        }
+
+        /* Galleria */
+        .gallery {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 20px;
+        }
+
+        .gallery img {
+            width: 100%;
+            height: auto;
+            border-radius: 8px;
+            transition: transform 0.3s;
+        }
+
+        .gallery img:hover {
+            transform: scale(1.05);
+        }
+
+        /* Footer */
+        footer {
+            text-align: center;
+            padding: 20px;
+            background: #333;
+            color: white;
+        }
+
+        /* Responsività */
+        @media (max-width: 768px) {
+            header h1 {
+                font-size: 2.5rem;
+            }
+
+            header p {
+                font-size: 1.2rem;
+            }
+        }
+    </style>
 </head>
 <body>
-    <!-- Header con Logo e Menu -->
-    <header class="hero">
-        <div class="overlay">
-            <h1>Petrol Service 20</h1>
-            <p>Soluzioni innovative per gli impianti petroliferi</p>
-            <a href="#about" class="cta-button">Scopri di più</a>
-        </div>
-        <nav class="navbar">
-            <a href="#about">Chi Siamo</a>
-            <a href="#services">Servizi</a>
-            <a href="#gallery">Galleria</a>
-            <a href="#contact">Contatti</a>
-        </nav>
+    <!-- Header con immagine di sfondo -->
+    <header>
+        <h1>Petrol Service 20</h1>
+        <p>Soluzioni innovative per gli impianti petroliferi</p>
     </header>
+
+    <!-- Navbar -->
+    <nav>
+        <a href="#about">Chi Siamo</a>
+        <a href="#services">Servizi</a>
+        <a href="#gallery">Galleria</a>
+        <a href="#contact">Contatti</a>
+    </nav>
 
     <!-- Sezioni -->
     <section id="about">
         <h2>Chi Siamo</h2>
         <p>Petrol Service 20 è un'azienda leader nella manutenzione e gestione degli impianti petroliferi. Garantiamo qualità, sicurezza e affidabilità.</p>
     </section>
+
     <section id="services">
         <h2>Servizi</h2>
         <ul>
@@ -35,6 +137,7 @@
             <li>Fornitura di attrezzature specializzate</li>
         </ul>
     </section>
+
     <section id="gallery">
         <h2>Galleria</h2>
         <div class="gallery">
@@ -43,11 +146,14 @@
             <img src="https://via.placeholder.com/400" alt="Foto impianto 3">
         </div>
     </section>
+
     <section id="contact">
         <h2>Contatti</h2>
         <p>Per informazioni contattaci a: <strong>info@petrolservice20.com</strong></p>
         <p>Telefono: <strong>+39 123 456 789</strong></p>
     </section>
+
+    <!-- Footer -->
     <footer>
         <p>&copy; 2025 Petrol Service 20. Tutti i diritti riservati.</p>
     </footer>
