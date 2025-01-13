@@ -115,7 +115,7 @@ footer a:hover {
 /* Media Query per Responsività */
 @media (max-width: 768px) {
     #center-logo {
-        width: 120px; /* Ridimensiona il logo per dispositivi mobili */
+        width: 360px; /* Ridimensiona il logo per dispositivi mobili */
     }
 
     .counters {
