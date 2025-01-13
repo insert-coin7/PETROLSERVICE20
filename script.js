@@ -1,20 +1,28 @@
 document.addEventListener("DOMContentLoaded", () => {
     const counters = document.querySelectorAll(".count");
-    const updateCounter = (element, target) => {
-        let count = 0;
-        const increment = Math.ceil(target / 100);
-        const interval = setInterval(() => {
-            count += increment;
-            if (count >= target) {
-                count = target;
-                clearInterval(interval);
-            }
-            element.textContent = count.toLocaleString();
-        }, 50);
-    };
+    const speed = 500; // Velocità più alta per rallentare l'animazione
 
     counters.forEach(counter => {
-        const target = parseInt(counter.getAttribute("data-target"));
-        updateCounter(counter, target);
+        const updateCount = () => {
+            const target = parseInt(counter.getAttribute("data-target")); // Assicura che sia un numero
+            const count = parseInt(counter.innerText);
+
+            if (isNaN(target)) {
+                console.error(`Valore non valido per data-target: ${counter.getAttribute("data-target")}`);
+                return; // Ferma l'animazione per questo contatore
+            }
+
+            // Incremento basato su un valore più lento
+            const increment = Math.ceil(target / speed);
+
+            if (count < target) {
+                counter.innerText = count + increment;
+                setTimeout(updateCount, 50); // Aumenta il tempo tra gli aggiornamenti per rallentare
+            } else {
+                counter.innerText = target; // Imposta il valore finale
+            }
+        };
+
+        updateCount();
     });
 });
