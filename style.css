@@ -77,11 +77,15 @@ section {
 
 /* Footer */
 footer {
+    display: flex; /* Allinea gli elementi orizzontalmente */
+    justify-content: space-between; /* Spaziatura tra il logo e il testo */
+    align-items: center; /* Allinea verticalmente gli elementi */
     width: 100%; /* Larghezza piena */
     background-color: #333; /* Sfondo scuro */
     color: white; /* Testo bianco */
+    padding: 20px; /* Spaziatura interna */
+    box-sizing: border-box; /* Include il padding nella larghezza */
     text-align: center;
-    padding: 20px 0; /* Spaziatura sopra e sotto */
     position: relative; /* Posizionamento corretto */
     z-index: 10;
 }
@@ -102,15 +106,16 @@ footer a:hover {
     color: #ccc; /* Cambia colore al passaggio del mouse */
 }
 
-footer {
-    display: flex; /* Utilizza il layout flexbox per allineare gli elementi */
-    justify-content: space-between; /* Spaziatura tra logo e testo */
+.footer-content {
+    display: flex; /* Allinea il logo e il contenuto orizzontalmente */
     align-items: center; /* Allinea verticalmente il contenuto */
-    padding: 20px; /* Spaziatura interna */
+    max-width: 1200px; /* Larghezza massima del contenitore */
+    margin: 0 auto; /* Centra il contenitore */
+    width: 100%; /* Adatta il contenitore alla larghezza del footer */
 }
 
 .footer-logo {
     height: 50px; /* Altezza del logo */
-    margin-right: 20px; /* Spazio tra il logo e il contenuto */
+    margin-right: 20px; /* Spaziatura tra il logo e il testo */
+    display: block;
 }
-
