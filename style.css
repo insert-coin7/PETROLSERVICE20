@@ -38,10 +38,22 @@ header {
 
 /* Logo nell'header */
 #center-logo {
-    width: 100px; /* Ridimensiona il logo per adattarlo meglio */
-    height: auto; /* Mantiene le proporzioni */
-    max-width: 15%; /* Limita la larghezza relativa allo schermo */
-    margin: 0 auto; /* Centra il logo */
+    width: 200px; /* Dimensione più grande */
+    height: auto;
+    max-width: 20%; /* Limita la larghezza relativa allo schermo */
+    margin: 0 auto;
+    animation: fadeIn 2s ease-in-out; /* Effetto animazione per il logo */
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: scale(0.9);
+    }
+    to {
+        opacity: 1;
+        transform: scale(1);
+    }
 }
 
 /* Sezioni */
