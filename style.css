@@ -40,7 +40,7 @@ header {
 #center-logo {
     width: 120px; /* Dimensione ridotta del logo */
     height: auto;
-    max-width: 20%; /* Assicura che non occupi più del 20% della larghezza dello schermo */
+    max-width: 40%; /* Assicura che non occupi più del 20% della larghezza dello schermo */
 }
 
 
