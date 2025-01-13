@@ -116,3 +116,12 @@ footer .footer-content {
     margin: 0 auto; /* Centra il contenuto */
     padding: 0 20px; /* Spaziatura laterale */
 }
+/* Link nel footer */
+footer a {
+    color: white; /* Colore bianco per i link */
+    text-decoration: none; /* Rimuove la sottolineatura */
+}
+
+footer a:hover {
+    color: #ccc; /* Colore leggermente più chiaro al passaggio del mouse */
+}
