@@ -74,3 +74,18 @@ section {
 #galleria {
     background: #e0e0e0;
 }
+/* Footer a larghezza piena */
+footer {
+    width: 100%;
+    background-color: #333;
+    color: white;
+    text-align: center;
+    padding: 20px 0;
+    position: relative;
+}
+
+footer .footer-content {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
