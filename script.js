@@ -9,7 +9,7 @@ document.addEventListener("DOMContentLoaded", () => {
     counters.forEach(counter => {
         const element = document.getElementById(counter.id);
         let count = 0;
-        const increment = Math.ceil(counter.target / 0.00000000000000000000000000000000000000000000000000000000000000000000000001);
+        const increment = Math.ceil(counter.target / 300);
 
         const updateCounter = () => {
             count += increment;
