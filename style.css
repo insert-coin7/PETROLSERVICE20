@@ -101,3 +101,11 @@ footer a {
 footer a:hover {
     color: #ccc; /* Cambia colore al passaggio del mouse */
 }
+
+footer .footer-logo {
+    height: 50px; /* Dimensiona il logo */
+    margin-top: 10px; /* Spaziatura sopra il logo */
+    display: block; /* Centra il logo orizzontalmente */
+    margin-left: auto; /* Allinea a destra se necessario */
+    margin-right: auto;
+}
