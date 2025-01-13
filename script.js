@@ -1,20 +1,20 @@
 document.addEventListener("DOMContentLoaded", () => {
     const counters = document.querySelectorAll(".count");
-    const updateCounter = (element, target) => {
+    counters.forEach(counter => {
+        const target = +counter.getAttribute("data-target");
         let count = 0;
         const increment = Math.ceil(target / 100);
-        const interval = setInterval(() => {
+
+        const updateCounter = () => {
             count += increment;
             if (count >= target) {
-                count = target;
-                clearInterval(interval);
+                counter.textContent = target.toLocaleString();
+            } else {
+                counter.textContent = count.toLocaleString();
+                requestAnimationFrame(updateCounter);
             }
-            element.textContent = count.toLocaleString();
-        }, 50);
-    };
+        };
 
-    counters.forEach(counter => {
-        const target = parseInt(counter.getAttribute("data-target"));
-        updateCounter(counter, target);
+        updateCounter();
     });
 });
