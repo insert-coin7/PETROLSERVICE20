@@ -1,20 +1,22 @@
 document.addEventListener("DOMContentLoaded", () => {
     const counters = document.querySelectorAll(".count");
-    counters.forEach(counter => {
-        const target = +counter.getAttribute("data-target");
-        let count = 0;
-        const increment = Math.ceil(target / 100);
+    const speed = 200; // Velocità dell'animazione
 
-        const updateCounter = () => {
-            count += increment;
-            if (count >= target) {
-                counter.textContent = target.toLocaleString();
+    counters.forEach(counter => {
+        const updateCount = () => {
+            const target = +counter.getAttribute("data-target");
+            const count = +counter.innerText;
+
+            const increment = target / speed;
+
+            if (count < target) {
+                counter.innerText = Math.ceil(count + increment);
+                setTimeout(updateCount, 20); // Aggiornamento ricorsivo
             } else {
-                counter.textContent = count.toLocaleString();
-                requestAnimationFrame(updateCounter);
+                counter.innerText = target;
             }
         };
 
-        updateCounter();
+        updateCount();
     });
 });
