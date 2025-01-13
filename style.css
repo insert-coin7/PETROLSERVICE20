@@ -40,7 +40,7 @@ header {
 #center-logo {
     width: 700px; /* Dimensione più grande */
     height: auto;
-    max-width: 10%; /* Limita la larghezza relativa allo schermo */
+    max-width: auto; /* Limita la larghezza relativa allo schermo */
     margin: 0 auto;
     animation: fadeIn 2s ease-in-out; /* Effetto animazione per il logo */
 }
