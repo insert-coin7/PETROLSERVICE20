@@ -9,63 +9,47 @@ body {
     font-family: Arial, sans-serif;
 }
 
-/* Contenitore del video */
-.video-container {
-    position: relative;
+/* Stile per il video nell'header */
+header {
+    position: relative; /* Per sovrapporre il testo */
+    height: 100vh; /* L'altezza dell'intestazione copre l'intero viewport */
+    overflow: hidden; /* Nasconde qualsiasi contenuto che eccede */
+}
+
+header video {
     width: 100%;
-    height: 100vh; /* Altezza dell'intero schermo */
-    overflow: hidden;
+    height: 100%;
+    object-fit: cover; /* Ritaglia il video per riempire lo spazio senza deformarlo */
 }
 
-/* Video a schermo intero */
-.background-video {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    min-width: 100%;
-    min-height: 100%;
-    width: auto;
-    height: auto;
-    z-index: -1;
-    object-fit: cover;
-}
-
-/* Overlay per il testo */
-.overlay {
-    position: absolute;
+header .overlay {
+    position: absolute; /* Sovrapposto al video */
     top: 0;
     left: 0;
     width: 100%;
     height: 100%;
-    display: flex;
+    display: flex; /* Per centrare il contenuto */
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    background: rgba(0, 0, 0, 0.5); /* Sfondo trasparente per migliorare la leggibilità */
+    color: white; /* Testo bianco */
     text-align: center;
-    background: rgba(0, 0, 0, 0.4); /* Leggera trasparenza */
-    color: white;
+    padding: 20px;
 }
 
-.main-title {
-    font-size: 3em;
-    font-weight: bold;
-    text-transform: uppercase;
+header h1 {
+    font-size: 3rem; /* Dimensione del titolo */
     margin: 0;
-    opacity: 0.8; /* Semitrasparenza */
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.7); /* Ombra per migliorare la leggibilità */
 }
 
-.subtitle {
-    font-size: 1.5em;
-    margin-top: 0.5em;
-    opacity: 0.8; /* Semitrasparenza */
+header p {
+    font-size: 1.5rem; /* Dimensione del sottotitolo */
+    margin-top: 10px;
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.7);
 }
 
-/* Sezioni successive */
-section {
-    padding: 50px;
-    text-align: center;
-}
 
 #chi-siamo {
     background: #f9f9f9;
