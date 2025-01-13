@@ -36,10 +36,13 @@ header {
     z-index: 1;
 }
 
+/* Logo nell'header */
 #center-logo {
-    width: 150px; /* Dimensiona il logo centrale */
+    width: 100px; /* Dimensione ridotta del logo */
     height: auto;
+    max-width: 20%; /* Assicura che non occupi più del 20% della larghezza dello schermo */
 }
+
 
 /* Sezioni */
 section {
