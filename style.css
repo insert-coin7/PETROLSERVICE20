@@ -76,16 +76,23 @@ section {
 }
 /* Footer a larghezza piena */
 footer {
-    width: 100%;
-    background-color: #333;
-    color: white;
-    text-align: center;
-    padding: 20px 0;
-    position: relative;
+    width: 100%; /* Assicura larghezza piena */
+    background-color: #333; /* Colore di sfondo scuro */
+    color: white; /* Colore del testo */
+    text-align: center; /* Testo centrato */
+    padding: 20px 0; /* Spaziatura sopra e sotto */
+    position: relative; /* Necessario per il posizionamento corretto */
+    z-index: 10; /* Per sovrapposizione corretta */
 }
 
+/* Contenuto interno del footer */
 footer .footer-content {
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 0 20px;
+    max-width: 1200px; /* Limita la larghezza interna */
+    margin: 0 auto; /* Centra il contenuto */
+    padding: 0 20px; /* Spaziatura laterale */
+}
+
+/* Optional: Margine per separare il footer dalle altre sezioni */
+section {
+    margin-bottom: 20px;
 }
