@@ -76,7 +76,7 @@ section {
 }
 
 /* Footer */
-footer 
+footer  {
     position: relative; /* Posizionamento relativo per contenere elementi assoluti */
     display: flex; /* Allinea gli elementi orizzontalmente */
     justify-content: space-between; /* Spaziatura tra il logo e il testo */
@@ -87,7 +87,6 @@ footer
     padding: 20px; /* Spaziatura interna */
     box-sizing: border-box; /* Include il padding nella larghezza */
     text-align: center;
-    position: relative; /* Posizionamento corretto */
     z-index: 10;
 }
 
