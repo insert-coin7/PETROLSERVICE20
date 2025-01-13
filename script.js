@@ -17,7 +17,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
             if (count < target) {
                 counter.innerText = count + increment;
-                setTimeout(updateCount, 100); // Aumenta il tempo tra gli aggiornamenti per rallentare
+                setTimeout(updateCount, 50); // Aumenta il tempo tra gli aggiornamenti per rallentare
             } else {
                 counter.innerText = target; // Imposta il valore finale
             }
