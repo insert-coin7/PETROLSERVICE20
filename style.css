@@ -38,11 +38,11 @@ header {
 
 /* Logo nell'header */
 #center-logo {
-    width: 150px; /* Dimensione ridotta del logo */
-    height: auto;
-    max-width: 50%; /* Assicura che non occupi più del 20% della larghezza dello schermo */
+    width: 100px; /* Ridimensiona il logo per adattarlo meglio */
+    height: auto; /* Mantiene le proporzioni */
+    max-width: 15%; /* Limita la larghezza relativa allo schermo */
+    margin: 0 auto; /* Centra il logo */
 }
-
 
 /* Sezioni */
 section {
