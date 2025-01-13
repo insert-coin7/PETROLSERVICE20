@@ -4,6 +4,8 @@ body {
     margin: 0;
     padding: 0;
     color: #333;
+    line-height: 1.6;
+    background-color: #f9f9f9;
 }
 
 /* Header */
@@ -28,19 +30,15 @@ header {
     position: relative;
     top: 50%;
     transform: translateY(-50%);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
     z-index: 1;
 }
 
-#logo {
-    position: absolute;
-    top: 20px;
-    left: 20px;
-    height: 50px;
-    transition: all 0.3s ease;
-}
-
-#logo:hover {
-    transform: scale(1.1);
+#center-logo {
+    width: 150px; /* Dimensiona il logo centrale */
+    height: auto;
 }
 
 /* Sezioni */
@@ -101,9 +99,8 @@ footer a:hover {
 
 /* Media Query per Responsività */
 @media (max-width: 768px) {
-    #logo {
-        height: 40px;
-        left: 10px;
+    #center-logo {
+        width: 120px; /* Ridimensiona il logo per dispositivi mobili */
     }
 
     .counters {
