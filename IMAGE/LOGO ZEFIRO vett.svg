@@ -1,0 +1,30 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape" version="1.1" width="375" height="375" viewBox="0 0 375 375">
+<defs>
+<clipPath id="clip_0">
+<path transform="matrix(.24,0,0,.24,0,0)" d="M0 0H1562.5V1593.75H0Z" clip-rule="evenodd"/>
+</clipPath>
+<clipPath id="clip_1">
+<path transform="matrix(.24,0,0,.24,0,0)" d="M0 0H1562.5V1562.5H0Z" clip-rule="evenodd"/>
+</clipPath>
+<clipPath id="clip_2">
+<path transform="matrix(.24,0,0,.24,0,0)" d="M0 0H1562.5V1562.5H0Z" clip-rule="evenodd"/>
+</clipPath>
+<clipPath id="clip_3">
+<path transform="matrix(.24,0,0,.24,0,0)" d="M0 0H1562.5V1562.5H0Z" clip-rule="evenodd"/>
+</clipPath>
+</defs>
+<g clip-path="url(#clip_0)">
+<path transform="matrix(.75,0,0,.75,0,0)" d="M0 0H500V510H0Z" fill="#ffffff"/>
+<path transform="matrix(.75,0,0,.75,0,0)" d="M0 0H500V500H0Z" fill="#ffffff"/>
+</g>
+<g clip-path="url(#clip_1)">
+<path transform="matrix(.75,0,0,.75,0,0)" d="M0 0H500V500H0Z" fill="#ffffff"/>
+</g>
+<g clip-path="url(#clip_2)">
+<path transform="matrix(.9446684,0,0,.9446684,-8.432632,-11.992919)" d="M0 0H500V500H0Z"/>
+</g>
+<g clip-path="url(#clip_3)">
+<text fill="#ffffff" xml:space="preserve" transform="matrix(.4239657 0 0 .4239657 83.391849 193.3542)" font-size="24" font-family="CormorantSC"><tspan y="24" x="57.015626 91.91156 120.327518 148.19147 174.30344 194.89542 216.8554 243.71135 264.30335 294.1593 322.57527 348.59123 374.60719 400.71916 429.3991">Make it happen.</tspan></text>
+<text fill="#ffffff" xml:space="preserve" transform="matrix(1.1897737 0 0 1.1897737 79.35376 154.64798)" font-size="24" font-family="CormorantGaramond" font-weight="bold"><tspan y="21" x="1.34375 34.991704 67.319667 98.95163 126.2876 162.04755">ZEFIRO</tspan></text>
+</g>
+</svg>
