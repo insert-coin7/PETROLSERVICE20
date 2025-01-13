@@ -113,11 +113,3 @@ footer a:hover {
     margin: 0 auto; /* Centra il contenitore */
     width: 100%; /* Adatta il contenitore alla larghezza del footer */
 }
-
-.footer-logo {
-    position: absolute; /* Posizionamento assoluto */
-    bottom: 20px; /* Distanza dal bordo inferiore del footer */
-    right: 20px; /* Distanza dal bordo destro del footer */
-    height: 50px; /* Altezza del logo */
-}
-
