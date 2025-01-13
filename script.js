@@ -8,7 +8,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
     counters.forEach(counter => {
         const element = document.getElementById(counter.id);
-        let count = 0;
+        let count = 10;
         const increment = Math.ceil(counter.target / 0.0000000000000001);
 
         const updateCounter = () => {
