@@ -102,10 +102,15 @@ footer a:hover {
     color: #ccc; /* Cambia colore al passaggio del mouse */
 }
 
-footer .footer-logo {
-    height: 50px; /* Dimensiona il logo */
-    margin-top: 10px; /* Spaziatura sopra il logo */
-    display: block; /* Centra il logo orizzontalmente */
-    margin-left: auto; /* Allinea a destra se necessario */
-    margin-right: auto;
+footer {
+    display: flex; /* Utilizza il layout flexbox per allineare gli elementi */
+    justify-content: space-between; /* Spaziatura tra logo e testo */
+    align-items: center; /* Allinea verticalmente il contenuto */
+    padding: 20px; /* Spaziatura interna */
 }
+
+.footer-logo {
+    height: 50px; /* Altezza del logo */
+    margin-right: 20px; /* Spazio tra il logo e il contenuto */
+}
+
