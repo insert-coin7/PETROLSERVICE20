@@ -38,9 +38,9 @@ header {
 
 /* Logo nell'header */
 #center-logo {
-    width: 120px; /* Dimensione ridotta del logo */
+    width: 150px; /* Dimensione ridotta del logo */
     height: auto;
-    max-width: 40%; /* Assicura che non occupi più del 20% della larghezza dello schermo */
+    max-width: 50%; /* Assicura che non occupi più del 20% della larghezza dello schermo */
 }
 
 
