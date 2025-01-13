@@ -1,6 +1,6 @@
 document.addEventListener("DOMContentLoaded", () => {
     const counters = document.querySelectorAll(".count");
-    const speed = 500; // Velocità più alta per rallentare l'animazione
+    const speed = 900; // Velocità più alta per rallentare l'animazione
 
     counters.forEach(counter => {
         const updateCount = () => {
