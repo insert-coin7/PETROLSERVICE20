@@ -38,7 +38,7 @@ header {
 
 /* Logo nell'header */
 #center-logo {
-    width: 700px; /* Dimensione più grande */
+    width: 450px; /* Dimensione più grande */
     height: auto;
     margin: 0 auto;
     animation: fadeIn 3s ease-in-out; /* Effetto animazione per il logo */
