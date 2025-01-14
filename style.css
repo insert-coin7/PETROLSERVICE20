@@ -85,7 +85,12 @@ section {
     border-radius: 8px; /* Mantiene gli angoli arrotondati */
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2); /* Aggiunge ombreggiatura */
 }
-
+.images-grid img:hover {
+    transform: scale(1.1); /* Ingrandisce leggermente l'immagine */
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3); /* Aggiunge un'ombra per l'effetto di sollevamento */
+    z-index: 10; /* Assicura che l'immagine sia sopra le altre */
+    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Effetti di transizione fluidi */
+}
 /* Footer */
 footer {
     background: #333;
