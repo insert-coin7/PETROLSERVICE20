@@ -53,11 +53,6 @@ header {
     margin: 0;
 }
 
-.text-container p {
-    font-size: 1.5em;
-    font-style: italic;
-    margin: 10px 0 0;
-}
 #center-logo {
     width: 200px; /* Ridotto per una dimensione migliore */
     height: auto;
