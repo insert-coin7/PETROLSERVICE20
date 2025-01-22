@@ -78,19 +78,24 @@ header {
     #center-logo {
         width: 120px; /* Dimensione ridotta per dispositivi mobili */
         left: 10px;  /* Posizionamento corretto per evitare sovrapposizioni */
-        top: 10px;   /* Regola la posizione verticale */
-    }
-
-    .text-container h1 {
-        font-size: 2.5em; /* Riduzione dimensione del titolo su dispositivi mobili */
+        top: 10px;    /* Regola la posizione verticale */
+        right: auto;
     }
 
     .header-content {
         flex-direction: column;
-        justify-content: flex-start; /* Evita la sovrapposizione */
+        justify-content: center; /* Centra nuovamente verticalmente */
         height: 100vh;
     }
+
+    .text-container {
+        margin-top: 0; /* Reset per assicurare centratura */
+        position: relative;
+        top: 50%; /* Rende il testo centrato verticalmente */
+        transform: translateY(-50%);
+    }
 }
+
 
 /* Sezioni */
 section {
