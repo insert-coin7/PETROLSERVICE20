@@ -31,22 +31,24 @@ header {
 .header-content {
     display: flex;
     align-items: center;
-    justify-content: center; /* Centra orizzontalmente */
+    justify-content: center;
     text-align: center;
-    height: 100vh; /* Occupa tutta l'altezza */
+    height: 100vh;
     position: relative;
 }
 
-/* Posizionamento del logo in alto a sinistra */
+/* Posizionamento del logo in alto a sinistra con dissolvenza */
 #center-logo {
+    opacity: 0;
     width: 200px;
     height: auto;
     position: absolute;
     top: 20px;
     left: 20px; /* Sposta il logo in alto a sinistra */
-    animation: fadeIn 3s ease-in-out;
+    animation: fadeIn 3s ease-in-out forwards;
 }
 
+/* Animazione dissolvenza */
 @keyframes fadeIn {
     from {
         opacity: 0;
@@ -57,7 +59,6 @@ header {
         transform: scale(1);
     }
 }
-
 
 /* Testo centrato */
 .text-container h1 {
@@ -76,7 +77,6 @@ header {
         width: 180px; /* Dimensione ridotta su schermi più piccoli */
     }
 }
-
 
 /* Sezioni */
 section {
@@ -103,17 +103,17 @@ section {
 }
 
 .images-grid img {
-    width: 100%; /* Adatta la larghezza al contenitore */
-    height: 200px; /* Altezza uniforme */
-    object-fit: cover; /* Assicura che le immagini riempiano l'area mantenendo il focus */
-    border-radius: 8px; /* Mantiene gli angoli arrotondati */
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2); /* Aggiunge ombreggiatura */
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
 }
 
 .images-grid img:hover {
-    transform: scale(1.1); /* Ingrandisce leggermente l'immagine */
-    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3); /* Aggiunge un'ombra per l'effetto di sollevamento */
-    z-index: 10; /* Assicura che l'immagine sia sopra le altre */
+    transform: scale(1.1);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
+    z-index: 10;
 }
 
 /* Footer */
