@@ -48,7 +48,7 @@ header {
 }
 
 /* Testo centrato */
-.text-container {
+.text-container h1 {
     text-align: center;
     color: black;
     font-family: Arial, sans-serif;
