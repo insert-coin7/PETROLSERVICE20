@@ -29,24 +29,19 @@ header {
 
 /* Contenitore dell'header */
 .header-content {
-    position: relative;
-    top: 50%;
-    transform: translateY(-50%);
     display: flex;
     align-items: center;
-    justify-content: center;
+    justify-content: center; /* Centra orizzontalmente */
     text-align: center;
-    z-index: 1;
+    height: 100vh; /* Occupa tutta l'altezza */
 }
 
-/* Stile per il testo */
 .text-container {
     text-align: center;
     color: white;
     font-family: Arial, sans-serif;
-    margin-right: 30px;
-    position: relative;
-    left: -0px; /* Leggera regolazione per centrare il testo */
+    max-width: 80%;
+    margin: 0 auto;
 }
 
 #center-logo {
