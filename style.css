@@ -26,6 +26,7 @@ header {
     z-index: -1;
 }
 
+/* Contenitore header */
 .header-content {
     position: relative;
     top: 50%;
@@ -36,14 +37,38 @@ header {
     z-index: 1;
 }
 
-/* Logo nell'header */
+/* Stile per il logo - spostato a destra */
 #center-logo {
-    width: 450px; /* Dimensione più grande */
+    width: 250px; /* Ridimensiona il logo se necessario */
     height: auto;
-    margin: 0 auto;
-    animation: fadeIn 3s ease-in-out; /* Effetto animazione per il logo */
+    position: absolute;
+    top: 20px;  /* Posizione dall'alto */
+    right: 50px;  /* Sposta verso destra */
+    animation: fadeIn 3s ease-in-out;
 }
 
+/* Stile per il testo della società */
+.company-text {
+    text-align: center;
+    color: white;
+    font-family: Arial, sans-serif;
+    position: relative;
+    margin-top: 100px; /* Spazio rispetto al logo */
+}
+
+.company-text h1 {
+    font-size: 4em;
+    font-weight: bold;
+    margin: 0;
+}
+
+.company-text p {
+    font-size: 1.5em;
+    margin: 10px 0 0;
+    font-style: italic;
+}
+
+/* Effetto di animazione per il logo */
 @keyframes fadeIn {
     from {
         opacity: 0;
@@ -54,6 +79,7 @@ header {
         transform: scale(1);
     }
 }
+
 
 /* Sezioni */
 section {
