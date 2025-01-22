@@ -50,11 +50,13 @@ header {
 /* Testo centrato */
 .text-container {
     text-align: center;
-    color: white;
+    color: black;
     font-family: Arial, sans-serif;
     max-width: 80%;
     margin: 0 auto;
     margin-top: 60px; /* Spazio sotto il logo */
+    font-weight: bold;
+    font-size: 4em; /* Aumenta la dimensione del testo */
 }
 
 @media (max-width: 768px) {
