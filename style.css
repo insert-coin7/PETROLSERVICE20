@@ -63,14 +63,16 @@ header {
 /* Testo centrato */
 .text-container h1 {
     text-align: center;
-    color: black;
+    color: white;
     font-family: Arial, sans-serif;
     max-width: 80%;
     margin: 0 auto;
-    margin-top: 60px; /* Spazio sotto il logo */
+    margin-top: 60px;
     font-weight: bold;
-    font-size: 4em; /* Aumenta la dimensione del testo */
+    font-size: 4em;
+    text-shadow: 2px 2px 10px rgba(0, 0, 0, 0.8); /* Effetto rilievo */
 }
+
 
 @media (max-width: 768px) {
     #center-logo {
