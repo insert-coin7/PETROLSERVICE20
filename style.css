@@ -16,6 +16,7 @@ header {
     color: white;
 }
 
+/* Video di sfondo */
 #background-video {
     position: absolute;
     top: 0;
@@ -26,49 +27,46 @@ header {
     z-index: -1;
 }
 
-/* Contenitore header */
+/* Contenitore dell'header */
 .header-content {
     position: relative;
     top: 50%;
     transform: translateY(-50%);
     display: flex;
-    flex-direction: column;
     align-items: center;
+    justify-content: center;
+    text-align: center;
     z-index: 1;
 }
 
-/* Stile per il logo - spostato a destra */
-#center-logo {
-    width: 250px; /* Ridimensiona il logo se necessario */
-    height: auto;
-    position: absolute;
-    top: 20px;  /* Posizione dall'alto */
-    right: 50px;  /* Sposta verso destra */
-    animation: fadeIn 3s ease-in-out;
-}
-
-/* Stile per il testo della società */
-.company-text {
+/* Stile per il testo */
+.text-container {
     text-align: center;
     color: white;
     font-family: Arial, sans-serif;
-    position: relative;
-    margin-top: 100px; /* Spazio rispetto al logo */
+    margin-right: 30px; /* Distanza tra il testo e il logo */
 }
 
-.company-text h1 {
-    font-size: 4em;
+.text-container h1 {
+    font-size: 3em;
     font-weight: bold;
     margin: 0;
 }
 
-.company-text p {
+.text-container p {
     font-size: 1.5em;
-    margin: 10px 0 0;
     font-style: italic;
+    margin: 10px 0 0;
 }
 
-/* Effetto di animazione per il logo */
+/* Logo */
+#center-logo {
+    width: 250px;  /* Dimensione controllata */
+    height: auto;
+    animation: fadeIn 3s ease-in-out;
+}
+
+/* Animazione di comparsa */
 @keyframes fadeIn {
     from {
         opacity: 0;
@@ -79,7 +77,6 @@ header {
         transform: scale(1);
     }
 }
-
 
 /* Sezioni */
 section {
