@@ -46,7 +46,7 @@ header {
     font-family: Arial, sans-serif;
     margin-right: 30px;
     position: relative;
-    left: -50px; /* Leggera regolazione per centrare il testo */
+    left: -0px; /* Leggera regolazione per centrare il testo */
 }
 
 #center-logo {
