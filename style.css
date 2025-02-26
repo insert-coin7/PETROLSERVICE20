@@ -1,116 +1,74 @@
-/* Stile Generale */
-body {
-    font-family: 'Bodoni', 'Times New Roman', serif;
-    margin: 0;
-    padding: 0;
-    color: #333;
-    line-height: 1.6;
-    background-color: #f9f9f9;
-}
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Pagina Zefiro</title>
+</head>
+<body>
+    <header>
+        <nav class="navbar">
+            <div class="logo">
+                <img src="IMAGE/MagicEraser_250122_184510.PNG" alt="Zefiro Logo">
+            </div>
+            <ul class="nav-links">
+                <li><a href="#home">Home</a></li>
+                <li><a href="#galleria">Galleria</a></li>
+                <li><a href="#chi-siamo">Chi Siamo</a></li>
+                <li><a href="#contatti">Contatti</a></li>
+            </ul>
+        </nav>
+        <video autoplay muted loop id="background-video">
+            <source src="IMAGE/video1.mp4" type="video/mp4">
+            Il tuo browser non supporta i video.
+        </video>
+        <div class="header-content">
+            <div class="text-container">
+                <h1>Zefiro</h1>
+                <p>Soluzioni innovative per gli impianti petroliferi</p>
+            </div>
+        </div>
+    </header>
 
-/* Barra di navigazione */
-.navbar {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 80px;
-    background-color: #1c1c1c; /* Grigio antracite */
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    padding: 0 40px;
-    z-index: 100;
-}
+    <section id="chi-siamo">
+        <h2>Chi Siamo</h2>
+        <p>Dal 2021, Zefiro S.r.l. si è affermata come una realtà solida e in continua crescita, specializzata nella gestione in appalto di stazioni di servizio...</p>
 
-.navbar .logo img {
-    height: 80px; /* Aumentata la dimensione del logo */
-}
+        <h2>LITRI 2024</h2>
+        <div class="counters">
+            <div class="counter">
+                <span id="counter1" class="count" data-target="10">0</span>+
+                <p>| STAZIONI</p>
+            </div>
+            <div class="counter">
+                <span id="counter2" class="count" data-target="30000000">0</span>+
+                <p>| LITRI</p>
+            </div>
+            <div class="counter">
+                <span id="counter3" class="count" data-target="20">0</span>+
+                <p>DIPENDENTI |</p>
+            </div>
+        </div>
+    </section>
 
-.nav-links {
-    list-style: none;
-    display: flex;
-    gap: 40px;
-    margin-right: 40px;
-}
+    <section id="galleria">
+        <h2>Alcuni dei nostri impianti</h2>
+        <div class="images-grid">
+            <img src="IMAGE/impianto1.jpg" alt="Impianto 1">
+            <img src="IMAGE/impianto2.jpg" alt="Impianto 2">
+            <img src="IMAGE/impianto3.jpg" alt="Impianto 3">
+        </div>
+    </section>
 
-.nav-links li {
-    display: inline;
-}
+    <footer>
+        <div class="footer-content">
+            <p>&copy; 2025 Zefiro. Tutti i diritti riservati.</p>
+            <p>Registro imprese di Roma | REA: RM - 1638882</p>
+            <p>Email: <a href="mailto:info@zefiroitalia.it">info@zefiroitalia.it</a></p>
+        </div>
+    </footer>
 
-.nav-links a {
-    text-decoration: none;
-    color: white;
-    font-size: 18px;
-    font-weight: bold;
-    transition: color 0.3s ease-in-out;
-    padding: 10px 15px;
-}
-
-.nav-links a:hover {
-    color: #f2a900; /* Giallo Lamborghini */
-}
-
-/* Corregge il comportamento di Home e Chi Siamo */
-#home {
-    scroll-margin-top: 100px;
-}
-
-#contatti {
-    scroll-margin-top: 100px;
-}
-
-/* Header con video di sfondo */
-header {
-    position: relative;
-    height: 100vh;
-    text-align: center;
-    color: white;
-}
-
-#background-video {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    z-index: -1;
-}
-
-.header-content {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    text-align: center;
-    color: white;
-    z-index: 2;
-}
-
-.text-container h1 {
-    font-family: Arial, sans-serif;
-    font-weight: bold;
-    font-size: 5em;
-    text-shadow: 2px 2px 10px rgba(0, 0, 0, 0.8);
-}
-
-/* Sezione Galleria - immagini allineate orizzontalmente */
-.images-grid {
-    display: flex;
-    flex-wrap: nowrap; /* Impedisce che le immagini vadano a capo */
-    justify-content: flex-start;
-    gap: 20px;
-    overflow-x: scroll; /* Forza lo scorrimento orizzontale */
-    padding: 20px;
-    width: 100%;
-    min-width: 100vw; /* Assicura che le immagini abbiano spazio per allinearsi */
-}
-
-.images-grid img {
-    width: 300px;
-    height: auto;
-    border-radius: 8px;
-    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
-    flex-shrink: 0; /* Evita che le immagini si ridimensionino */
-}
+    <script src="script.js" defer></script>
+</body>
+</html>
