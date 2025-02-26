@@ -1,3 +1,4 @@
+@import url('https://fonts.googleapis.com/css2?family=Archivo+Black&display=swap');
 /* Stile Generale */
 body {
     font-family: 'Bodoni', 'Times New Roman', serif;
@@ -86,7 +87,6 @@ header {
 }
 
 /* Testo centrato */
-@import url('https://fonts.googleapis.com/css2?family=Archivo+Black&display=swap');
 .text-container h1 {
     text-align: center;
     color: white;
