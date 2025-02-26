@@ -98,11 +98,13 @@ header {
 /* Sezione Galleria - immagini allineate orizzontalmente */
 .images-grid {
     display: flex;
-    justify-content: center;
+    flex-wrap: nowrap; /* Impedisce che le immagini vadano a capo */
+    justify-content: flex-start;
     gap: 20px;
-    overflow-x: auto;
-    white-space: nowrap;
+    overflow-x: scroll; /* Forza lo scorrimento orizzontale */
     padding: 20px;
+    width: 100%;
+    min-width: 100vw; /* Assicura che le immagini abbiano spazio per allinearsi */
 }
 
 .images-grid img {
@@ -110,4 +112,5 @@ header {
     height: auto;
     border-radius: 8px;
     box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+    flex-shrink: 0; /* Evita che le immagini si ridimensionino */
 }
