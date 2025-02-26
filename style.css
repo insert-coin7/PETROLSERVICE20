@@ -124,6 +124,11 @@ header {
 
 
 /* Sezioni */
+section {
+    padding: 60px 20px;
+    text-align: center;
+}
+
 .info-container {
     display: flex;
     justify-content: center;
