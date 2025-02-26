@@ -1,67 +1,28 @@
-/* Stile Generale */
-body, html {
-    margin: 0;
-    padding: 0;
-    font-family: Arial, sans-serif;
-    color: #fff;
-    background-color: #000;
-}
+document.addEventListener("DOMContentLoaded", () => {
+    const counters = document.querySelectorAll(".count");
+    const speed = 1000; // Velocità più alta per rallentare l'animazione
 
-/* Navbar */
-.navbar {
-    position: fixed;
-    top: 0;
-    width: 100%;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 10px 30px;
-    background: rgba(0, 0, 0, 0.8);
-    z-index: 1000;
-}
+    counters.forEach(counter => {
+        const updateCount = () => {
+            const target = parseInt(counter.getAttribute("data-target")); // Assicura che sia un numero
+            const count = parseInt(counter.innerText);
 
-/* Slider */
-.slider-container {
-    position: relative;
-    width: 80%;
-    margin: auto;
-    overflow: hidden;
-    display: flex;
-    align-items: center;
-}
+            if (isNaN(target)) {
+                console.error(`Valore non valido per data-target: ${counter.getAttribute("data-target")}`);
+                return; // Ferma l'animazione per questo contatore
+            }
 
-.slider {
-    display: flex;
-    transition: transform 0.5s ease-in-out;
-}
+            // Incremento basato su un valore più lento
+            const increment = Math.ceil(target / speed);
 
-.slider img {
-    width: 100%;
-    max-width: 100%;
-    display: block;
-}
+            if (count < target) {
+                counter.innerText = count + increment;
+                setTimeout(updateCount, 50); // Aumenta il tempo tra gli aggiornamenti per rallentare
+            } else {
+                counter.innerText = target; // Imposta il valore finale
+            }
+        };
 
-/* Pulsanti Slider */
-.slider-btn {
-    position: absolute;
-    top: 50%;
-    transform: translateY(-50%);
-    background: rgba(0, 0, 0, 0.5);
-    color: white;
-    border: none;
-    cursor: pointer;
-    padding: 10px 15px;
-    font-size: 20px;
-}
-
-#prev {
-    left: 10px;
-}
-
-#next {
-    right: 10px;
-}
-
-.slider-btn:hover {
-    background: rgba(255, 255, 255, 0.3);
-}
+        updateCount();
+    });
+});
