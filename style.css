@@ -124,20 +124,39 @@ header {
 
 
 /* Sezioni */
-section {
-    padding: 60px 20px;
-    text-align: center;
-}
-
-.counters {
+.info-container {
     display: flex;
     justify-content: center;
+    flex-wrap: wrap;
     gap: 20px;
+    padding: 40px 20px;
 }
 
-.counter {
-    font-size: 2rem;
+.info-box {
+    background: white;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    padding: 20px;
+    text-align: center;
+    width: 250px;
+    transition: transform 0.3s;
 }
+
+.info-box:hover {
+    transform: scale(1.05);
+}
+
+.info-box h3 {
+    margin: 10px 0;
+    font-size: 1.5em;
+    color: #1c1c1c;
+}
+
+.info-box p {
+    font-size: 1.2em;
+    color: #555;
+}
+
 
 /* Galleria */
 .images-grid {
