@@ -22,10 +22,17 @@ body {
     z-index: 10;
 }
 
-/* Logo dentro la barra */
+/* Logo dentro la barra in alto a sinistra con dissolvenza*/
 .top-bar .logo {
     height: 160px; /* Regola altezza logo */
     width: auto;
+    opacity: 0;
+    width: 200px;
+    height: auto;
+    position: absolute;
+    top: 20px;
+    left: 20px; /* Sposta il logo in alto a sinistra */
+    animation: fadeIn 3s ease-in-out forwards;
 }
 
 /* Header */
@@ -55,17 +62,6 @@ header {
     text-align: center;
     height: 100vh;
     position: relative;
-}
-
-/* Posizionamento del logo in alto a sinistra con dissolvenza */
-#center-logo {
-    opacity: 0;
-    width: 200px;
-    height: auto;
-    position: absolute;
-    top: 20px;
-    left: 20px; /* Sposta il logo in alto a sinistra */
-    animation: fadeIn 3s ease-in-out forwards;
 }
 
 /* Animazione dissolvenza */
