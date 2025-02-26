@@ -1,44 +1,67 @@
-document.addEventListener('DOMContentLoaded', () => {
-    // Cambia colore della navbar durante lo scroll
-    window.addEventListener('scroll', function () {
-        const navbar = document.querySelector('.navbar');
-        if (window.scrollY > 50) {
-            navbar.style.background = 'black';
-            navbar.style.transition = 'background 0.3s ease-in-out';
-        } else {
-            navbar.style.background = 'rgba(0, 0, 0, 0.8)';
-        }
-    });
+/* Stile Generale */
+body, html {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+    color: #fff;
+    background-color: #000;
+}
 
-    // Animazione di fade-in delle sezioni durante lo scroll
-    const sections = document.querySelectorAll('.section');
-    const observer = new IntersectionObserver(entries => {
-        entries.forEach(entry => {
-            if (entry.isIntersecting) {
-                entry.target.style.opacity = 1;
-                entry.target.style.transform = 'translateY(0)';
-                entry.target.style.transition = 'opacity 0.6s ease-out, transform 0.6s ease-out';
-            }
-        });
-    }, {
-        threshold: 0.2
-    });
+/* Navbar */
+.navbar {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 30px;
+    background: rgba(0, 0, 0, 0.8);
+    z-index: 1000;
+}
 
-    sections.forEach(section => {
-        section.style.opacity = 0;
-        section.style.transform = 'translateY(50px)';
-        observer.observe(section);
-    });
+/* Slider */
+.slider-container {
+    position: relative;
+    width: 80%;
+    margin: auto;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+}
 
-    // Effetto hover sulla galleria
-    const galleryImages = document.querySelectorAll('.gallery-grid img');
-    galleryImages.forEach(img => {
-        img.addEventListener('mouseover', () => {
-            img.style.transform = 'scale(1.05)';
-            img.style.transition = 'transform 0.3s ease-in-out';
-        });
-        img.addEventListener('mouseout', () => {
-            img.style.transform = 'scale(1)';
-        });
-    });
-});
+.slider {
+    display: flex;
+    transition: transform 0.5s ease-in-out;
+}
+
+.slider img {
+    width: 100%;
+    max-width: 100%;
+    display: block;
+}
+
+/* Pulsanti Slider */
+.slider-btn {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background: rgba(0, 0, 0, 0.5);
+    color: white;
+    border: none;
+    cursor: pointer;
+    padding: 10px 15px;
+    font-size: 20px;
+}
+
+#prev {
+    left: 10px;
+}
+
+#next {
+    right: 10px;
+}
+
+.slider-btn:hover {
+    background: rgba(255, 255, 255, 0.3);
+}
