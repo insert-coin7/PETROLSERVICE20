@@ -86,10 +86,11 @@ header {
 }
 
 /* Testo centrato */
+@import url('https://fonts.googleapis.com/css2?family=Archivo+Black&display=swap');
 .text-container h1 {
     text-align: center;
     color: white;
-    font-family: Arial, sans-serif;
+    font-family: 'Archivo Black', sans-serif; /* Font simile a Lamborghini */
     max-width: 40%;
     margin: 0 auto;
     margin-top: 60px;
