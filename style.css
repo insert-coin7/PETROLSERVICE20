@@ -88,7 +88,7 @@ header {
 /* Testo centrato */
 .text-container h1 {
     text-align: center;
-    color: white;
+    color: black;
     font-family: Arial, sans-serif;
     max-width: 80%;
     margin: 0 auto;
