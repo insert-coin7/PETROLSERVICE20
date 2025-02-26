@@ -20,86 +20,48 @@ body, html {
     z-index: 1000;
 }
 
-.nav-links {
-    list-style: none;
-    display: flex;
-    gap: 20px;
-}
-
-.nav-links li a {
-    color: #fff;
-    text-decoration: none;
-    font-size: 18px;
-    transition: color 0.3s;
-}
-
-.nav-links li a:hover {
-    color: #f7c200;
-}
-
-/* Hero Section */
-.hero {
+/* Slider */
+.slider-container {
     position: relative;
-    width: 100%;
-    height: 100vh;
+    width: 80%;
+    margin: auto;
+    overflow: hidden;
     display: flex;
     align-items: center;
-    justify-content: center;
-    text-align: center;
 }
 
-.background-video {
+.slider {
+    display: flex;
+    transition: transform 0.5s ease-in-out;
+}
+
+.slider img {
+    width: 100%;
+    max-width: 100%;
+    display: block;
+}
+
+/* Pulsanti Slider */
+.slider-btn {
     position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    z-index: -1;
+    top: 50%;
+    transform: translateY(-50%);
+    background: rgba(0, 0, 0, 0.5);
+    color: white;
+    border: none;
+    cursor: pointer;
+    padding: 10px 15px;
+    font-size: 20px;
 }
 
-.hero-content h1 {
-    font-size: 3rem;
-    text-transform: uppercase;
-    letter-spacing: 2px;
-    color: #f7c200;
+#prev {
+    left: 10px;
 }
 
-/* Sezioni */
-.section {
-    padding: 100px 20px;
-    text-align: center;
+#next {
+    right: 10px;
 }
 
-.dark {
-    background: #111;
-}
-
-/* Galleria */
-.gallery {
-    text-align: center;
-    padding: 50px 20px;
-}
-
-.gallery-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-    gap: 20px;
-}
-
-.gallery-grid img {
-    width: 100%;
-    border-radius: 10px;
-    transition: transform 0.3s;
-}
-
-.gallery-grid img:hover {
-    transform: scale(1.05);
-}
-
-/* Footer */
-footer {
-    text-align: center;
-    padding: 20px;
-    background: #111;
+.slider-btn:hover {
+    background: rgba(255, 255, 255, 0.3);
 }
