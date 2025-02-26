@@ -24,7 +24,7 @@ body {
 
 /* Logo dentro la barra in alto a sinistra con dissolvenza */
 .top-bar .logo {
-    height: 90px; /* Dimensione più adatta per la barra */
+    height: 60px; /* Dimensione più adatta per la barra */
     width: auto;
     opacity: 0; /* Inizia invisibile */
     position: absolute;
