@@ -101,6 +101,7 @@ header {
     color: white;
     font-family: 'Bodoni', sans-serif; /* Font simile a Lamborghini */
     max-width: 40%;
+    margin-left: 10vw; /* 10% della larghezza dello schermo */
     margin: 0 auto;
     margin-top: 60px;
     font-weight: bold;
