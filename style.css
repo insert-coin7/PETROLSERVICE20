@@ -103,28 +103,22 @@ header {
 
 /* Media Query per Responsività */
 @media (max-width: 768px) {
-    #center-logo {
-        width: 120px; /* Dimensione ridotta per dispositivi mobili */
-        left: 10px;  /* Posizionamento corretto per evitare sovrapposizioni */
-        top: 10px;    /* Regola la posizione verticale */
-        right: auto;
-    }
-
-    .header-content {
-        flex-direction: column;
-        justify-content: center; /* Centra nuovamente verticalmente */
-        height: 100vh;
+    .text-container h1 {
+        font-size: 3.5em; /* Aumenta la grandezza del testo */
+        text-align: center; /* Assicura che sia centrato */
+        max-width: 90%; /* Evita che il testo sia troppo largo */
+        margin: 0 auto; /* Centra orizzontalmente */
+        padding-right: 0; /* Rimuove lo spostamento a sinistra */
     }
 
     .text-container {
-        margin-top: 0; /* Reset per assicurare centratura */
-        position: relative;
-        top: 50%; /* Rende il testo centrato verticalmente */
-        transform: translateY(-50%);
+        display: flex;
+        justify-content: center; /* Centra il contenitore del testo */
+        align-items: center; /* Centra verticalmente */
+        height: 100vh; /* Occupa tutta l'altezza disponibile */
     }
-    
-}
 
+}
 
 /* Sezioni */
 section {
