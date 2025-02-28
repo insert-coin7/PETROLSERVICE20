@@ -12,19 +12,23 @@ document.addEventListener("DOMContentLoaded", function () {
                 let target = parseInt(counter.getAttribute("data-target"));
                 let current = 0;
 
-                // Imposta velocità diverse in base all'ID del counter
-                let increment;
+                // Imposta velocità molto più lente in base all'ID del counter
+                let duration;
                 if (counter.id === "counter2") {
-                    increment = target / 100; // Litri (più veloce)
+                    duration = 5000; // Litri - va più veloce
+                } else if (counter.id === "counter3") {
+                    duration = 8000; // Dipendenti - molto più lento
                 } else {
-                    increment = target / 200; // Stazioni e Dipendenti (più lento)
+                    duration = 10000; // Stazioni - il più lento
                 }
+
+                let stepTime = duration / target; // Tempo per ogni incremento
 
                 let updateCounter = () => {
                     if (current < target) {
-                        current += increment;
-                        counter.textContent = Math.floor(current);
-                        requestAnimationFrame(updateCounter);
+                        current++;
+                        counter.textContent = current;
+                        setTimeout(updateCounter, stepTime);
                     } else {
                         counter.textContent = target;
                     }
