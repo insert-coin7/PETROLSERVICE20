@@ -126,6 +126,36 @@ section {
     transform: scale(1.05);
 }
 
+/* Assicura che l'immagine di sfondo sia sotto il testo */
+.info-box img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: 1; /* Mantiene l'immagine sotto il testo */
+}
+
+/* Assicura che il numero sia visibile sopra l'immagine */
+.info-content {
+    position: absolute;
+    z-index: 2; /* Porta il numero sopra l'immagine */
+    font-size: 2em;
+    font-weight: bold;
+    color: white; /* Assicura che sia visibile */
+    text-shadow: 2px 2px 10px rgba(0, 0, 0, 0.8); /* Per dare contrasto */
+}
+
+/* Centra il numero */
+.info-content p {
+    margin: 0;
+    padding: 0;
+    position: relative;
+    text-align: center;
+}
+
+
 /* Galleria */
 .images-grid {
     display: grid;
