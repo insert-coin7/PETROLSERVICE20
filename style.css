@@ -146,7 +146,7 @@ section {
 .info-title {
     font-size: 1.8em;
     font-weight: bold;
-    color: white; /* Colore scuro per visibilità *
+    color: white; /* Colore scuro per visibilità */
     text-shadow: 2px 2px 10px rgba(0, 0, 0, 0.8); /* Effetto rilievo */
     margin-bottom: 10px; /* Distanza dal box */
     text-transform: uppercase; /* Opzionale per rendere il testo tutto maiuscolo */
