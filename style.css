@@ -179,7 +179,7 @@ section {
 /* Il counter rimane visibile sopra l'immagine */
 .info-content {
     position: absolute;
-    bottom: 10px; /* Sposta il counter verso il basso */
+    bottom: 15px; /* Sposta il counter verso il basso */
     z-index: 1;
     color: white;
     font-weight: bold;
