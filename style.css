@@ -139,13 +139,13 @@ section {
 
 /* Assicura che il numero sia visibile sopra l'immagine */
 .info-content {
-    position: absolute;
+    position: relative;
     z-index: 2; /* Porta il numero sopra l'immagine */
     font-size: 2em;
     font-weight: bold;
     color: white; /* Assicura che sia visibile */
     text-shadow: 2px 2px 10px rgba(0, 0, 0, 0.8); /* Per dare contrasto */
-    bottom: -90%; /* Sposta il numero leggermente verso il basso */
+    bottom: 90%; /* Sposta il numero leggermente verso il basso */
 }
 
 /* Centra il numero */
