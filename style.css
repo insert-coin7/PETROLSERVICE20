@@ -217,3 +217,19 @@ footer a:hover {
         padding: 10px;
     }
 
+    /* Riduce l'altezza del video su mobile */
+    #background-video {
+        height: 50vh; /* Il video sarà il 50% dello schermo */
+        object-fit: cover;
+    }
+
+    header {
+        height: 50vh; /* Adatta anche l'header */
+    }
+
+    .header-content {
+        height: 50vh; /* Mantiene il testo centrato */
+    }
+}
+
+
