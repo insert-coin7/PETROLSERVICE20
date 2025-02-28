@@ -212,26 +212,24 @@ footer a:hover {
 
 /* Miglioramento della visualizzazione mobile */
 @media (max-width: 768px) {
-    body {
-        font-size: 16px;
-        padding: 10px;
-    }
-
-    /* Adatta il video su mobile senza tagliarlo */
     #background-video {
         width: 100%;
-        height: auto; /* Impedisce che si espanda a tutta altezza */
-        max-height: 50vh; /* Non occupa più del 50% dello schermo */
-        object-fit: contain; /* Mostra l'intero video senza tagliarlo */
-        position: relative; /* Evita problemi di sovrapposizione */
+        height: 100vh; /* Occupa l'intera altezza dello schermo */
+        object-fit: cover; /* Riempie lo schermo mantenendo le proporzioni */
+        position: absolute;
+        top: 0;
+        left: 0;
     }
 
     header {
-        height: auto; /* Adatta l'header al video */
+        height: 100vh; /* Mantiene l'header alla stessa altezza del video */
     }
 
     .header-content {
-        height: auto; /* Mantiene il testo adattabile */
+        height: 100vh; /* Allinea il testo con il video */
+        display: flex;
+        align-items: center;
+        justify-content: center;
     }
 }
 
