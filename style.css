@@ -158,7 +158,6 @@ section {
     width: 100%;
     height: 100%;
     object-fit: cover; /* Assicura che l'immagine riempia il riquadro */
-    opacity: 0.3; /* Rende l'immagine semi-trasparente per migliorare la leggibilità */
 }
 
 /* Il contenuto (testo + counter) rimane sopra l'immagine */
