@@ -180,12 +180,15 @@ section {
 .info-content {
     position: absolute;
     bottom: 5px; /* Sposta il counter verso il basso */
+    left: 50%; /* Sposta il punto di riferimento al centro */
+    transform: translateX(-50%); /* Corregge il centro dell'elemento */
     z-index: 1;
     color: white;
     font-weight: bold;
     font-size: 2em;
-    text-shadow: 2px 2px 10px rgba(0, 0, 0, 0.7); /* Ombra per rendere il testo più leggibile */
+    text-shadow: 2px 2px 10px rgba(0, 0, 0, 0.7); /* Ombra per migliorare la leggibilità */
 }
+
 
 /* Effetto hover per ingrandire leggermente */
 .info-box:hover {
