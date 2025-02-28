@@ -1,91 +1,79 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="it">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="style.css">
     <title>Pagina Zefiro</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js" defer></script>
 </head>
 <body>
     <!-- Barra superiore -->
-<div class="top-bar">
-    <img src="IMAGE/MagicEraser_250122_184510.PNG" alt="Zefiro Logo" class="logo">
-</div><header>
-<header>
-    <div class="video-container">
-        <video autoplay muted loop playsinline id="background-video">
-            <source src="IMAGE/video1.mp4" type="video/mp4">
-            Il tuo browser non supporta i video.
-        </video>
+    <div class="top-bar">
+        <img src="IMAGE/MagicEraser_250122_184510.PNG" alt="Zefiro Logo" class="logo">
     </div>
- <!-- Contenitore del testo sopra il video -->
-    <div class="header-content">
-        <div class="text-container">
-          <h1>
-    SOLUZIONI INNOVATIVE <br>
-    PER IMPIANTI PETROLIFERI
-         </h1>
-    </div>
- </div>
-</header>
-</body>
     
-<!-- Sezione Home -->
-<section id="home">
-    <h2>Chi Siamo</h2>
-    <p>Dal 2021, Zefiro S.r.l. si è affermata come una realtà solida e in continua crescita, specializzata nella gestione in appalto di stazioni di servizio. Nonostante la sua giovane età, l'azienda gestisce con successo oltre 10 impianti nelle principali aree del Lazio, tra cui Roma, Civitavecchia, Aprilia e Viterbo, con oltre 30 milioni di litri di carburante erogati nel 2024. Con un team di oltre 20 professionisti competenti e appassionati, Zefiro garantisce un servizio impeccabile, puntando su qualità, formazione e innovazione per offrire ai clienti un’esperienza di eccellenza.</p>
-
-<section id="info">
-    <h2>Statistiche Aziendali</h2>
-    <div class="info-container">
-    <!-- Stazioni -->
-    <div class="info-wrapper">
-        <h3 class="info-title">Stazioni</h3>
-        <div class="info-box">
-            <img src="IMAGE/stazioni.webp" alt="Icona Stazioni" class="info-bg">
-            <div class="info-content">
-                <p><span id="counter1" data-target="10">0</span>+</p>
+    <!-- Header con video di sfondo -->
+    <header>
+        <div class="video-container">
+            <video autoplay muted loop playsinline id="background-video">
+                <source src="IMAGE/video1.mp4" type="video/mp4">
+                Il tuo browser non supporta i video.
+            </video>
+        </div>
+        <div class="header-content">
+            <div class="text-container">
+                <h1>SOLUZIONI INNOVATIVE <br> PER IMPIANTI PETROLIFERI</h1>
             </div>
         </div>
-    </div>
-
-    <!-- Litri -->
-    <div class="info-wrapper">
-        <h3 class="info-title">Litri</h3>
-        <div class="info-box">
-            <img src="IMAGE/litri.webp" alt="Icona Litri" class="info-bg">
-            <div class="info-content">
-                <p><span id="counter2" data-target="30000000">0</span>+</p>
-            </div>
-        </div>
-    </div>
-
-    <!-- Dipendenti -->
-    <div class="info-wrapper">
-        <h3 class="info-title">Dipendenti</h3>
-        <div class="info-box">
-            <img src="IMAGE/dipendenti.webp" alt="Icona Dipendenti" class="info-bg">
-            <div class="info-content">
-                <p><span id="counter3" data-target="20">0</span>+</p>
-            </div>
-        </div>
-    </div>
-</div>
-
-        
-</section>
-
-    </div>
-   
-    <h2>Servizi</h2>
-    <p>Zefiro S.r.l. offre una gestione operativa e strategica di stazioni di servizio con la massima efficienza, garantendo rifornimento rapido, assistenza di qualità e un moderno servizio di autolavaggio per una pulizia professionale di ogni tipo di veicolo, assicurando un'esperienza completa e affidabile per i nostri clienti.</p>
-    <h2>Punti di forza</h2>
-    <p>Grazie a una struttura organizzativa snella che consente di rispondere efficacemente alle esigenze di clienti e mercato, eb un’esperienza pluriennale nella gestione sia delle aree carburanti che dei servizi complementari i punti di forza di Zefiro S.r.l risiedono nella rapidità decisionale, g. La nostra politica per la qualità rappresenta un pilastro fondamentale: ogni servizio è progettato e monitorato per garantire i più alti standard. Inoltre, investiamo costantemente nella formazione continua del nostro team, offrendo competenza, cortesia e soluzioni sempre aggiornate per soddisfare al meglio le necessità dei nostri clienti.</p
-                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                        
+    </header>
     
-  
-</section>
-
+    <!-- Sezione Home -->
+    <section id="home">
+        <h2>Chi Siamo</h2>
+        <p>Zefiro S.r.l. si è affermata come una realtà solida nella gestione in appalto di stazioni di servizio...</p>
+    </section>
+    
+    <!-- Sezione Info con statistiche aziendali -->
+    <section id="info">
+        <h2>Statistiche Aziendali</h2>
+        <div class="info-container">
+            <div class="info-wrapper">
+                <h3 class="info-title">Stazioni</h3>
+                <div class="info-box">
+                    <img src="IMAGE/stazioni.webp" alt="Icona Stazioni" class="info-bg">
+                    <div class="info-content">
+                        <p><span id="counter1" data-target="10">0</span>+</p>
+                    </div>
+                </div>
+            </div>
+            <div class="info-wrapper">
+                <h3 class="info-title">Litri</h3>
+                <div class="info-box">
+                    <img src="IMAGE/litri.webp" alt="Icona Litri" class="info-bg">
+                    <div class="info-content">
+                        <p><span id="counter2" data-target="30000000">0</span>+</p>
+                    </div>
+                </div>
+            </div>
+            <div class="info-wrapper">
+                <h3 class="info-title">Dipendenti</h3>
+                <div class="info-box">
+                    <img src="IMAGE/dipendenti.webp" alt="Icona Dipendenti" class="info-bg">
+                    <div class="info-content">
+                        <p><span id="counter3" data-target="20">0</span>+</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Sezione Servizi -->
+    <section id="servizi">
+        <h2>Servizi</h2>
+        <p>Zefiro S.r.l. offre gestione operativa e strategica di stazioni di servizio con efficienza...</p>
+    </section>
+    
     <!-- Sezione Galleria -->
     <section id="galleria">
         <h2>Alcuni dei nostri impianti</h2>
@@ -93,21 +81,18 @@
             <img src="IMAGE/impianto1.jpg" alt="Impianto 1">
             <img src="IMAGE/impianto2.jpg" alt="Impianto 2">
             <img src="IMAGE/impianto3.jpg" alt="Impianto 3">
-            <img src="IMAGE/torresina.jpg" alt="torresina">
-            <img src="IMAGE/magliana2.jpg" alt="magliana2">
+            <img src="IMAGE/torresina.jpg" alt="Torresina">
+            <img src="IMAGE/magliana2.jpg" alt="Magliana2">
         </div>
     </section>
-
+    
     <!-- Footer -->
     <footer>
         <div class="footer-content">
             <p>&copy; 2025 Zefiro. Tutti i diritti riservati.</p>
-            <p><p>Registro imprese di Roma | REA: RM - 1638882</p>
+            <p>Registro imprese di Roma | REA: RM - 1638882</p>
             <p>Email: <a href="mailto:info@zefiroitalia.it">info@zefiroitalia.it</a></p>
         </div>
     </footer>
-
-    <!-- Collegamento a script.js -->
-    <script src="script.js" defer></script>
 </body>
 </html>
