@@ -19,10 +19,10 @@ document.addEventListener("DOMContentLoaded", function () {
                     stepTime = 1; // Litri - aggiorna molto più spesso
                     increment = target / 10000; // Ogni step aumenta di 
                 } else if (counter.id === "counter3") {
-                    stepTime = 40; // Dipendenti - più lento
+                    stepTime = 400; // Dipendenti - più lento
                     increment = 1; // Sale di 1 alla volta
                 } else {
-                    stepTime = 50; // Stazioni - il più lento
+                    stepTime = 500; // Stazioni - il più lento
                     increment = 1; // Sale di 1 alla volta
                 }
 
