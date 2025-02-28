@@ -41,16 +41,7 @@ body {
     width: auto;
     opacity: 0;
     animation: fadeIn 2.5s ease-in-out forwards;
-
-}
-}
-
-.top-bar .logo {
-    height: 240px; /* Altezza adeguata alla barra */
-    width: auto;
-    opacity: 0;
-    animation: fadeIn 2.5s ease-in-out forwards;
-
+    
 }
 
 /* Header */
