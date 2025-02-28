@@ -19,7 +19,7 @@ body {
     align-items: center;
     justify-content: flex-start;
     padding-left: 20px;
-    z-index: 1000;
+    z-index: 10;
 }
 
 .top-bar .logo {
