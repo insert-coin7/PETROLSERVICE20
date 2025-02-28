@@ -15,7 +15,7 @@ document.addEventListener("DOMContentLoaded", function () {
                 // Imposta velocità molto più lente in base all'ID del counter
                 let duration;
                 if (counter.id === "counter2") {
-                    duration = 1000; // Litri - va più veloce
+                    duration = 400; // Litri - va più veloce
                 } else if (counter.id === "counter3") {
                     duration = 8000; // Dipendenti - molto più lento
                 } else {
