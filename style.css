@@ -89,11 +89,10 @@ header {
 
 /* Testo centrato */
 .text-container h1 {
-    text-align: center;
-    color: white;
-    font-family: 'Bodoni', sans-serif;
-    font-size: 5em; /* Testo più grande */
+    text-align: left; /* Mantiene il testo allineato a sinistra */
+    font-size: 5em;
     font-weight: bold;
+    margin-left: -50%; /* Sposta il testo a sinistra come faceva il padding */
     text-shadow: 2px 2px 10px rgba(0, 0, 0, 0.8);
     max-width: 80%; /* Evita che il testo vada troppo largo */
     line-height: 1.2; /* Spazio tra le due righe */
