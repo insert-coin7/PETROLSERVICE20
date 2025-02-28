@@ -17,7 +17,7 @@ document.addEventListener("DOMContentLoaded", function () {
                 // Imposta velocità e step diversi per ogni counter
                 if (counter.id === "counter2") {
                     stepTime = 1; // Litri - aggiorna molto più spesso
-                    increment = target / 10000; // Ogni step aumenta di 
+                    increment = target / 50000; // Ogni step aumenta di 
                 } else if (counter.id === "counter3") {
                     stepTime = 400; // Dipendenti - più lento
                     increment = 1; // Sale di 1 alla volta
