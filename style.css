@@ -23,7 +23,7 @@ body {
 }
 
 .top-bar .logo {
-    height: 120px;
+    height: 160px;
     width: auto;
     opacity: 0;
     animation: fadeIn 2.5s ease-in-out forwards;
