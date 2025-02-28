@@ -14,7 +14,7 @@ body {
     top: 0;
     left: 0;
     width: 100%;
-    height: 80px; /* Altezza simile a Lamborghini */
+    height: 150px; /* Altezza simile a Lamborghini */
     background-color: #1c1c1c; /* Colore antracite */
     display: flex;
     align-items: center;
@@ -28,7 +28,7 @@ body {
     top: 0;
     left: 0;
     width: 100%;
-    height: 80px;
+    height: 150px;
     display: flex;
     align-items: center;
     justify-content: flex-start;
